@@ -12,8 +12,8 @@ class Controller {
     @GetMapping("/api/v1/delivery-order-price")
     fun getDeliveryOrderPrice(@RequestParam("venue_slug") venue_slug: String,
                               @RequestParam("cart_value") cart_value: Int,
-                              @RequestParam("user_lat") user_lat: Float,
-                              @RequestParam("user_lon") user_lon: Float): Output {
+                              @RequestParam("user_lat") user_lat: Double,
+                              @RequestParam("user_lon") user_lon: Double): Output {
         return calculator(venue_slug, cart_value, user_lat, user_lon)
     }
 }
